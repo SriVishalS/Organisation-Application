@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 3px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.formRowOneContainer {
+  height: 400px;
+}
+.formRowTwoContainer,
+.formRowThreeContainer {
+  height: 220px;
+  width: 100%;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.userPicSection {
+  width: 70%;
+}
+.userNameSection,
+.userDobSection {
+  width: 100%;
+}
+.fieldOneContainer,
+.fieldTwoContainer,
+.fieldThreeContainer {
+  width: 33%;
+}
+.picUpload {
+  height: 90px;
+  width: 100px;
+  border-radius: 50%;
+  background-image: url(usrProfile.png);
+  background-size: 100% 100%;
+}
+.userPicUploadBtn {
+  height: 40px;
+  text-align: center;
+}
+.btnContainer{
+      width: 95%;
+}
+.crudTableHead{
+      width: 100%;
+}
+thead{
+  text-align: center;
+  height: 50px;
+}
+tr>th{
+  border: 1px solid black;
+}

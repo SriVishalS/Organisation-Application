@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="style.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+      <!--*--------------WEBPAGECONTAINER--------------->
+      <div class="formContainer  d-flex flex-column">
+            <!-- !-----ROW ONE------ -->
+            <div class="formRowOneContainer d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row">
+                  <!-- !---DIVISION ONE ROW ONE---- -->
+                  <!-- !This Area Conatains UserPic,UploadBtn,NameInput,DobInput  -->
+                  <div class="fieldOneContainer d-flex flex-column justify-content-around">
+                        <!-- --usrPicArea -->
+                        <div class="userPicSection d-flex align-items-center">
+                              <div class="picUpload" id="displayPic"></div>
+                              <input type="file" id="usrImgUpload" style="display: none;"> 
+                              <button
+                                    class="userPicUploadBtn btn btn-light border border-primary border-1 text-primary m-3" onclick="uploadUserImage()">Upload
+                              </button>
+                        </div>
+                        <!-- ------UserNameField----- -->
+                        <div class="userNameSection">
+                              <p style="margin: 0 !important;">FULLNAME: </p>
+                              <input type="text" name="" id="usrFullName" class="usrFullName" required
+                                    style="width:90%;">
+                        </div>
+                        <div class="userGenderSection">
+                              <p style="margin: 0 !important;">GENDER: </p>
+                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="genderRadio1"
+                                    value="Male">
+                              <label class="form-check-label" for="inlineRadio1">MALE</label>
+                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="genderRadio2"
+                                    value="Female">
+                              <label class="form-check-label" for="inlineRadio1">FEMALE</label>
+                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="genderRadio3"
+                                    value="Others">
+                              <label class="form-check-label" for="inlineRadio1">OTHERS</label>
+                        </div>
+                        <!-- ---USRDOBFIELD--- -->
+                        <div class="userDobSection">
+                              <p style="margin: 0 !important;">DATE OF BIRTH: </p>
+                              <input type="date" max="2005-01-01" name="" id="usrDob" class="usrDob" required
+                                    style="width:90%;">
+                        </div>
+                  </div>
+                  <div class="fieldTwoContainer d-flex flex-column justify-content-around">
+                        <!--COUNTRY INPUT-->
+                        <div class="userCountrySection">
+                              <p style="margin: 0 !important;">COUNTRY: </p>
+                              <input type="text" name="" id="usrCountry" class="usrCountry" required style="width:90%;">
+                        </div>
+                        <!-- ------UserNameField----- -->
+                        <div class="userOrgSection">
+                              <p style="margin: 0 !important;">ORGANISATION: </p>
+                              <select name="" id="" style="width: 90%;">
+                                    <option value="">Select Organisation</option>
+                                    <option value="">Company 1</option>
+                                    <option value="">Company 2</option>
+                                    <option value="">Company 3</option>
+                              </select>
+                        </div>
+                        <!-- ---USR Mobile Number-- -->
+                        <div class="userMobNumSection">
+                              <p style="margin: 0 !important;">REGISTERED MOBILE NUMBER:</p>
+                              <input type="tel" name="" id="usrMobNum" class="usrMobNum" required style="width:90%;">
+                        </div>
+                        <div class="userState">
+                              <p style="margin: 0 !important;">STATE</p>
+                              <!--- India states -->
+                              <select id="country-state" name="country-state" style="width: 90%;">
+                                    <option value="">Select State</option>
+                                    <option value="AN">Andaman and Nicobar Islands</option>
+                                    <option value="AP">Andhra Pradesh</option>
+                                    <option value="AR">Arunachal Pradesh</option>
+                                    <option value="AS">Assam</option>
+                                    <option value="BR">Bihar</option>
+                                    <option value="CH">Chandigarh</option>
+                                    <option value="CT">Chhattisgarh</option>
+                                    <option value="DN">Dadra and Nagar Haveli</option>
+                                    <option value="DD">Daman and Diu</option>
+                                    <option value="DL">Delhi</option>
+                                    <option value="GA">Goa</option>
+                                    <option value="GJ">Gujarat</option>
+                                    <option value="HR">Haryana</option>
+                                    <option value="HP">Himachal Pradesh</option>
+                                    <option value="JK">Jammu and Kashmir</option>
+                                    <option value="JH">Jharkhand</option>
+                                    <option value="KA">Karnataka</option>
+                                    <option value="KL">Kerala</option>
+                                    <option value="LA">Ladakh</option>
+                                    <option value="LD">Lakshadweep</option>
+                                    <option value="MP">Madhya Pradesh</option>
+                                    <option value="MH">Maharashtra</option>
+                                    <option value="MN">Manipur</option>
+                                    <option value="ML">Meghalaya</option>
+                                    <option value="MZ">Mizoram</option>
+                                    <option value="NL">Nagaland</option>
+                                    <option value="OR">Odisha</option>
+                                    <option value="PY">Puducherry</option>
+                                    <option value="PB">Punjab</option>
+                                    <option value="RJ">Rajasthan</option>
+                                    <option value="SK">Sikkim</option>
+                                    <option value="TN">Tamil Nadu</option>
+                                    <option value="TG">Telangana</option>
+                                    <option value="TR">Tripura</option>
+                                    <option value="UP">Uttar Pradesh</option>
+                                    <option value="UT">Uttarakhand</option>
+                                    <option value="WB">West Bengal</option>
+                              </select>
+                        </div>
+                  </div>
+                  <div class="fieldThreeContainer d-flex flex-column justify-content-around">
+                        <!--CODE INPUT-->
+                        <div class="userPinCode">
+                              <p style="margin: 0 !important;">PINCODE :</p>
+                              <input type="number" name="" id="usrPinCode" class="usrPinCode    " required
+                                    style="width:90%;" placeholder="Ex: 600021">
+                        </div>
+                        <!-- ------Apply For ---- -->
+                        <div class="userDesignation">
+                              <p style="margin: 0 !important;">LOOKING FOR ? </p>
+                              <select name="" id="" style="width: 90%;">
+                                    <option value="">Select</option>
+                                    <option value="">FRONTEND DEVOLOPER (With Experience)</option>
+                                    <option value="">BACKEND DEVOLOPER (With Experience)</option>
+                                    <option value="">DESIGNER (With Experience)</option>
+                                    <option value="">TRAINEE</option>
+                                    <option value="">TESTING</option>
+                              </select>
+                        </div>
+                        <!-- ---UserMail-- -->
+                        <div class="userMailAddressSection">
+                              <p style="margin: 0 !important;">MAIL :</p>
+                              <input type="number" name="" id="usrMail" class="usrMail" required style="width:90%;"
+                                    placeholder="Ex: aaaa@gmail.com">
+                        </div>
+                        <!-- user City -->
+                        <div class="userCity">
+                              <p style="margin: 0 !important;">CITY : </p>
+                              <input type="text" name="" id="usrCity" placeholder="Ex: TamilNadu" class="usrCity"
+                                    required style="width:90%;">
+                        </div>
+                  </div>
+            </div>
+            <!-- !-----ROW TWO------ -->
+            <div class="formRowTwoContainer d-flex  mt-3 justify-content-between">
+                  <!-- !Temporary Address Field -->
+                  <div class="fieldFourContainer" style="width: 50%;">
+                        <p style="margin: 0 !important;">COMMUNICATION ADDRESS</p>
+                        <textarea name="" id="" rows="6" style="width: 100%;"></textarea>
+                        <input class="form-check-input mt-3" type="checkbox" name="inlineRadioOptions" id="genderRadio3"
+                              value="Others">
+                        <label class="form-check-label mt-2" for="inlineRadio1">Permanent Address Same As Communication
+                              Address</label>
+                  </div>
+                  <!-- !Permanent Address Field -->
+                  <div class="fieldFiveContainer" style=width:45%;>
+                        <p style="margin: 0 !important;">PERMANENT ADDRESS</p>
+                        <textarea name="" id="" rows=6" style="width: 93%;"></textarea>
+                  </div>
+            </div>
+            <!--!------ROW THREE -->
+            <div class="formRowThreeContainer d-flex flex-column">
+                  <!-- !Submit and Cancel Buttons Goes Here!! -->
+                  <div class="btnContainer d-flex justify-content-end">
+                        <button class="btn btn-success m-1">Register</button>
+                        <button class="btn btn-primary m-1">Cancel</button>
+                  </div>
+                  <table class="crudTable mt-4">
+                        <thead class="bg-warning">
+                              <tr>
+                                    <th>S.No</th>
+                                    <th>Name</th>
+                                    <th>Gender</th>
+                                    <th>DOB</th>
+                                    <th>Mobile Number</th>
+                                    <th>Email ID</th>
+                                    <th>Edit/Delete</th>
+                              </tr>
+                        </thead>
+                        <tbody></tbody>
+                  </table>
+
+            </div>
+      </div>
+      <script src="script.js"></script>
+</body>
+
+</html>
